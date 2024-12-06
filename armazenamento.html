@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenamento e Organização</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .filters {
+            margin-bottom: 20px;
+        }
+        .filters select, .filters input {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .document-list {
+            list-style: none;
+            padding: 0;
+        }
+        .document-item {
+            padding: 15px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .document-item button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .document-item button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Armazenamento e Organização</h1>
+    </div>
+    <div class="container">
+        <!-- Filtros -->
+        <div class="filters">
+            <select>
+                <option value="vigentes">Contratos Vigentes</option>
+                <option value="encerrados">Contratos Encerrados</option>
+                <option value="pendentes">Documentos Pendentes</option>
+            </select>
+            <input type="text" placeholder="Pesquisar por nome ou data">
+        </div>
+
+        <!-- Lista de Documentos -->
+        <ul class="document-list">
+            <li class="document-item">
+                <span>Contrato de Prestação de Serviço - Vigente</span>
+                <button>Baixar</button>
+            </li>
+            <li class="document-item">
+                <span>Acordo de Confidencialidade - Encerrado</span>
+                <button>Baixar</button>
+            </li>
+            <li class="document-item">
+                <span>Proposta Comercial - Pendente</span>
+                <button>Baixar</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

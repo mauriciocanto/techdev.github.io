@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .filters {
+            margin-bottom: 20px;
+        }
+        .filters select, .filters input {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .chart-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Relatórios</h1>
+    </div>
+    <div class="container">
+        <!-- Filtros -->
+        <div class="filters">
+            <select>
+                <option value="mensal">Mensal</option>
+                <option value="anual">Anual</option>
+                <option value="personalizado">Personalizado</option>
+            </select>
+            <input type="text" placeholder="Pesquisar por tipo de contrato">
+        </div>
+
+        <!-- Gráficos -->
+        <div class="chart-container">
+            <canvas id="approvalTimeChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="contractRenewalChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Gráfico de Tempo Médio de Aprovação
+        const ctx1 = document.getElementById('approvalTimeChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Tempo Médio de Aprovação (dias)',
+                    data: [5, 6, 4, 7, 3],
+                    backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                    borderColor: 'rgba(0, 123, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                }
+            }
+        });
+
+        // Gráfico de Índice de Renovação
+        const ctx2 = document.getElementById('contractRenewalChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                labels: ['Renovados', 'Não Renovados'],
+                datasets: [{
+                    label: 'Índice de Renovação',
+                    data: [75, 25],
+                    backgroundColor: ['rgba(0, 123, 255, 0.5)', 'rgba(220, 53, 69, 0.5)'],
+                    borderColor: ['rgba(0, 123, 255, 1)', 'rgba(220, 53, 69, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

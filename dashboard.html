@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .links, .indicators {
+            display: flex;
+            gap: 20px;
+        }
+        .card {
+            flex: 1;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .card h4 {
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dashboard</h1>
+    </div>
+    <div class="container">
+        <!-- Resumo de Atividades -->
+        <div class="section">
+            <h3>Resumo de Atividades</h3>
+            <p>Você tem 5 documentos aguardando aprovação e 3 contratos vencendo em breve.</p>
+        </div>
+
+        <!-- Links Rápidos -->
+        <div class="section">
+            <h3>Links Rápidos</h3>
+            <div class="links">
+                <div class="card">
+                    <h4>Cadastrar Parte</h4>
+                    <p>Acesse para adicionar novas partes envolvidas nos documentos.</p>
+                </div>
+                <div class="card">
+                    <h4>Gerar Documento</h4>
+                    <p>Crie documentos baseados em modelos padrão rapidamente.</p>
+                </div>
+                <div class="card">
+                    <h4>Relatórios</h4>
+                    <p>Visualize métricas e informações contratuais importantes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicadores -->
+        <div class="section">
+            <h3>Indicadores</h3>
+            <div class="indicators">
+                <div class="card">
+                    <h4>Documentos em Aprovação</h4>
+                    <p>5</p>
+                </div>
+                <div class="card">
+                    <h4>Contratos Vencendo</h4>
+                    <p>3</p>
+                </div>
+                <div class="card">
+                    <h4>Contratos Vigentes</h4>
+                    <p>20</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
